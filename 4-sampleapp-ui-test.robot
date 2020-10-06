@@ -5,13 +5,12 @@ Library  String
 Resource  ./4-kube-keywords.robot
 
 Suite Setup     Verify Kubernetes Setup of Sample App
-Test Setup      Init
+Test Setup      Open URL in Chrome Browser
 Test Teardown   Close Browser
 
 *** Variables ***
 ${URL}            https://brownnewton-watsonwolf.newapp.io/
 ${BROWSER}        Chrome
-${HEADLESS_BROWSER_ENABLED}    False
 
 *** Test Cases ***
 Sample App UI test
@@ -20,27 +19,10 @@ Sample App UI test
     Task is saved
 
 *** Keywords ***
-Init
-    Run keyword if  ${HEADLESS_BROWSER_ENABLED}
-    ...  Start Headless Browser
-    ...  ELSE
-    ...  Open URL in Chrome Browser
-
-Start Headless Browser
-    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chrome_options}   add_argument    headless
-    Call Method    ${chrome_options}   add_argument    disable-gpu
-    ${options}=     Call Method     ${chrome_options}    to_capabilities
-
-    ${chrome_options}=    Set Chrome Options
-    Create Webdriver    Chrome    chrome_options=${chrome_options}
-    Go To    ${URL}
-
 Open URL in Chrome Browser
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed   0.5 seconds
-    Execute javascript  document.body.style.zoom="170%"
 
 Create a task
     ${random_title}=  Generate Random String  8  	[LOWER]
