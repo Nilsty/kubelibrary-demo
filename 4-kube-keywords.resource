@@ -2,8 +2,10 @@
 Library    KubeLibrary    kube_config=my_kubeconfig.yaml
 Library    Collections
 
+Documentation  Resource file with kubernetes keywords
+
 *** Variables ***
-${NAMESPACE}      d25f3564-16c3-4ba6-8c08-ca5a77339779
+${NAMESPACE}      kube-sample-namespace
 ${CONFIGMAP}      sample-app-configmap-sample-app
     
 *** Keywords ***

@@ -2,14 +2,17 @@
 Library  SeleniumLibrary
 Library  String
 
-Resource  ./4-kube-keywords.robot
+Resource  ./4-kube-keywords.resource
 
 Suite Setup     Verify Kubernetes Setup of Sample App
 Test Setup      Open URL in Chrome Browser
 Test Teardown   Close Browser
 
+Documentation  Example to combine the vaildation of kubernetes objects
+...            and the UI of a sample app in one test suite
+
 *** Variables ***
-${URL}            https://brownnewton-watsonwolf.newapp.io/
+${URL}            https://daniel-nicholsonhineswoods-andrews.newapp.io/
 ${BROWSER}        Chrome
 
 *** Test Cases ***

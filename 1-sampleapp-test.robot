@@ -1,8 +1,10 @@
 *** Settings ***
 Library    KubeLibrary    kube_config=my_kubeconfig.yaml
 
+Documentation    Example test suite to check for running pod status
+
 *** Variables ***
-${NAMESPACE}      d25f3564-16c3-4ba6-8c08-ca5a77339779
+${NAMESPACE}      kube-sample-namespace
 
 *** Test Cases ***
 Verify Sample App

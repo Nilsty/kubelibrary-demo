@@ -5,8 +5,10 @@ Library  String
 Test Setup      Open URL in Chrome Browser
 Test Teardown   Close Browser
 
+Documentation  Example test suite verifying the UI of a sample app
+
 *** Variables ***
-${URL}            https://brownnewton-watsonwolf.newapp.io/
+${URL}            https://daniel-nicholsonhineswoods-andrews.newapp.io/
 ${BROWSER}        Chrome
 
 *** Test Cases ***
