@@ -12,7 +12,7 @@ Documentation  Example to combine the vaildation of kubernetes objects
 ...            and the UI of a sample app in one test suite
 
 *** Variables ***
-${URL}            https://daniel-nicholsonhineswoods-andrews.newapp.io/
+${URL}            https://sawaynoreillykonopelskischmeler.newapp.io/
 ${BROWSER}        Chrome
 
 *** Test Cases ***

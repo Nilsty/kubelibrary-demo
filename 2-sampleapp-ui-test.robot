@@ -8,7 +8,7 @@ Test Teardown   Close Browser
 Documentation  Example test suite verifying the UI of a sample app
 
 *** Variables ***
-${URL}            https://daniel-nicholsonhineswoods-andrews.newapp.io/
+${URL}            https://sawaynoreillykonopelskischmeler.newapp.io/
 ${BROWSER}        Chrome
 
 *** Test Cases ***

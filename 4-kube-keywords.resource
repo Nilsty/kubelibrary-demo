@@ -5,7 +5,7 @@ Library    Collections
 Documentation  Resource file with kubernetes keywords
 
 *** Variables ***
-${NAMESPACE}      kube-sample-namespace
+${NAMESPACE}      kubelib-demo-ecrf-meetup
 ${CONFIGMAP}      sample-app-configmap-sample-app
     
 *** Keywords ***
@@ -29,7 +29,7 @@ Sample app pods are running
 Configmap contains correct PUBLIC_SERVER_URL
     @{namespace_configmaps}=  Get Configmaps In Namespace    ${CONFIGMAP}  ${NAMESPACE}
     FOR  ${configmap}  IN  @{namespace_configmaps}
-        Dictionary Should Contain Item    ${configmap.data}    PUBLIC_SERVER_URL    http://my-sample-service:8080
+        Dictionary Should Contain Item    ${configmap.data}    PUBLIC_SERVER_URL    http://sample-service:8080
         ...  msg=PUBLIC_SERVER_URL not configured correctly.
     END
 
